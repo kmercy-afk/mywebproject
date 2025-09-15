@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <title>DIC cafe</title>
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet " href="../css/sale.css">
+    <script type="text/javascript" src="../javascript/sale.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+        <nav>
+        <a href="index.html" class="logo"><img src="/images/sample_logo_k.png" alt="DIC Cafe Logo"></a>
+            <ul class="global_nav">
+            <li class="global_nav_item"><a href="index.html">Home</a></li>
+            <li class="global_nav_item"><a href="sale.html">Menu</a></li>
+            <li class="global_nav_item"><a href="about.html">About Us</a></li>
+            <li class="global_nav_item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section_inner">
+    <div class="section_title">
+        <h1>Coffee bean sales</h1>
+    </div>
+    </section>
+
+    <section class="section_inner menu_section">
+    <div class="center">
+        <h1 class="menu_title">Lineup</h1>
+    </div>
+    <div class="menu_list coffee_menu">
+        <ul class="menu_list coffee_menu">
+        <li class="coffee_menu_list_item">
+            <div class="coffee_menu_content">
+            <h2 class="menu_item_title">Original Blend 200g</h2>
+            <p class="coffee_menu_price">500 yen</p>
+            </div>
+            <img src="../images/sample_cafe1.jpg" class="coffee_menu_image">
+        </li>
+        <li class="coffee_menu_list_item">
+            <div class="coffee_menu_content">
+            <h2 class="menu_item_title">Original Blend 500g</h2>
+            <p class="coffee_menu_price">900 yen</p>
+            </div>
+            <img src="../images/sample_cafe1.jpg" class="coffee_menu_image">
+        </li>
+        <li class="coffee_menu_list_item">
+            <div class="coffee_menu_content">
+            <h2 class="menu_item_title">Special Blend 200g</h2>
+            <p class="coffee_menu_price">700 yen</p>
+            </div>
+            <img src="../images/sample_cafe3.jpg" class="coffee_menu_image">
+        </li>
+        <li class="coffee_menu_list_item">
+            <div class="coffee_menu_content">
+            <h2 class="menu_item_title">Special Blend 500g</h2>
+            <p class="coffee_menu_price">1200 yen</p>
+            </div>
+            <img src="../images/sample_cafe3.jpg" class="coffee_menu_image">
+        </li>
+        </ul>
+    </div>
+    <h2>Shipping Information</h2>
+    <style>
+        ul custom-bullets {
+        list-style-type: circle;
+        }
+    </style>
+    <ul class="custom-bullets">
+        <li>- Shipping fee is 500 yen if the total amount is less than 2000 yen</li>
+        <li>- Shipping fee is 250 yen if the total amount is 2000 yen or more</li>
+        <li>- Free if the total amount is 3000 yen or more</li>
+    </ul>
+    </section>
+
+    <section class="section_inner">
+    <h2>Ordering</h2>
+    <form>
+        <p>Please select a product</p>
+        <div>
+            <select id="product" required>
+            <option hidden value="0">Please select</option>
+            <option value="p1">Original Blend 200g, ¥500</option>
+            <option value="p2">Original Blend 500g, ¥900</option>
+            <option value="p3">Special Blend 200g, ¥700</option>
+            <option value="p4">Special Blend 500g, ¥1200</option>
+            </select>
+            <p>Please select the quantity</p>
+            <input type="number" min="1" max="5" id="number" required>
+        </div>
+        <br>
+        <input type="button" class="btn" value="Add" onclick="add()">
+        <input type="button" class="btn" value="Total Amount" onclick="calc()">
+        <input type="button" class="btn" value="Clear Cart" onclick="clearCart()">
+    </form>
+    </section>
+    <script type="text/javascript" src="../javascript/sale.js"></script>
+</body>
+</html>
